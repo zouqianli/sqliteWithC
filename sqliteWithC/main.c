@@ -119,6 +119,7 @@ void deleteData(sqlite3 *db, char *sql, int rc, const char *data, char *zErrMsg)
         fprintf(stdout, "Delete data successfully\n");
     }
 }
+// #define SQLITE_OK  0   /* Successful result */
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
@@ -148,10 +149,9 @@ int main(int argc, const char * argv[]) {
     // 修改数据
 //    updateData(db, sql, rc, (void*)data, zErrMsg);
     // 删除数据
-    deleteData(db, sql, rc, (const char *)data, zErrMsg);
+//    deleteData(db, sql, rc, (const char *)data, zErrMsg);
     // 关闭数据库
     sqlite3_close(db);
-    
     
     return 0;
 }
